@@ -6,7 +6,7 @@ public interface View {
     
     void print(String text);
 
-    void start();
+    void start() throws ClassNotFoundException;
 
     void setPresenter(Presenter presenter);
 }

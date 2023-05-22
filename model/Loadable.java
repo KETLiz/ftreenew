@@ -2,6 +2,6 @@ package model;
 
 public interface Loadable {
     
-    void load() throws ClassNotFoundException;
+    Object load() throws ClassNotFoundException;
 
 }

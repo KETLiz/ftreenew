@@ -7,6 +7,7 @@ import presenter.Presenter;
 import ui.commands.AddMember;
 import ui.commands.Command;
 import ui.commands.Finish;
+import ui.commands.ReadFromFile;
 import ui.commands.ShowMembers;
 import ui.commands.WriteToFile;
 
@@ -19,6 +20,7 @@ public class MainMenu {
         commandList.add(new ShowMembers(console));
         commandList.add(new Finish(console));
         commandList.add(new WriteToFile(console));
+        commandList.add(new ReadFromFile(console));
     }
 
     public String showCommands() {
@@ -33,7 +35,7 @@ public class MainMenu {
         return sb.toString();
     }
 
-    public void execute(int numCommand) {
+    public void execute(int numCommand) throws ClassNotFoundException {
         commandList.get(numCommand - 1).execute();
     }
 

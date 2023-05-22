@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class Write implements Savable, Serializable {
+public class Write implements Savable {
 
     @Override
     public void save(Serializable serializable) {

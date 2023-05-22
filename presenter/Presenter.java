@@ -28,4 +28,8 @@ public class Presenter {
     public void writeMember() {
         service.writeMember();
     }
+
+    public void readMember() throws ClassNotFoundException {
+        service.readMember();
+    }
 }

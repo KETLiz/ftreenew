@@ -22,7 +22,7 @@ public class Console implements View{
     }
 
     @Override
-    public void start() {
+    public void start() throws ClassNotFoundException {
         hello();
         while(work) {
             print();
@@ -66,7 +66,7 @@ public class Console implements View{
         System.out.println(menu.showCommands());
     }
 
-    private void execute() {
+    private void execute() throws ClassNotFoundException {
         String line = sc.nextLine();
         if(checkTextForPoint(line)) {
             int numCommand = Integer.parseInt(line);
@@ -93,5 +93,9 @@ public class Console implements View{
 
     public void writeMember() {
         presenter.writeMember();
+    }
+
+    public void readMember() throws ClassNotFoundException {
+        presenter.readMember();
     }
 }

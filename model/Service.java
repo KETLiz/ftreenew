@@ -36,4 +36,10 @@ public class Service {
         Write write = new Write();
         write.save(familyTree);
     }
+
+    public void readMember() throws ClassNotFoundException {
+        Read read = new Read();
+        FamilyTree f = read.load();
+        f.showInfo();
+    }
 }
