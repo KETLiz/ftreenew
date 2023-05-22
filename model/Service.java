@@ -2,7 +2,8 @@ package model;
 
 public class Service {
     FamilyTree familyTree;
-    
+    //Write write;
+
     public Service() {
         familyTree = new FamilyTree();
     }
@@ -29,5 +30,10 @@ public class Service {
 
     public void sortByAge() {
         familyTree.sortByAge();
+    }
+
+    public void writeMember() {
+        Write write = new Write();
+        write.save(familyTree);
     }
 }

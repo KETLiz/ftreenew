@@ -1,10 +1,11 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class FamilyTree implements Iterable<Human> {
+public class FamilyTree implements Iterable<Human>, Serializable {
     Human human;
     List<Human> familyList;
     

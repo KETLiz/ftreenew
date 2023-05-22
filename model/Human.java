@@ -1,9 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Comparable<Human>, HumanItem{
+public class Human implements Comparable<Human>, HumanItem, Serializable{
     String name;
     int birthYear;
     Human mother;

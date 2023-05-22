@@ -3,10 +3,12 @@ package ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import presenter.Presenter;
 import ui.commands.AddMember;
 import ui.commands.Command;
 import ui.commands.Finish;
 import ui.commands.ShowMembers;
+import ui.commands.WriteToFile;
 
 public class MainMenu {
     List<Command> commandList;
@@ -16,6 +18,7 @@ public class MainMenu {
         commandList.add(new AddMember(console));
         commandList.add(new ShowMembers(console));
         commandList.add(new Finish(console));
+        commandList.add(new WriteToFile(console));
     }
 
     public String showCommands() {

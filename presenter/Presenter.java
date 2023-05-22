@@ -24,4 +24,8 @@ public class Presenter {
     public Human getHumanByName(String name) {
         return service.getHumanByName(name);
     }
+
+    public void writeMember() {
+        service.writeMember();
+    }
 }

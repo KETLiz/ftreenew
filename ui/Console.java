@@ -23,7 +23,7 @@ public class Console implements View{
 
     @Override
     public void start() {
-        System.out.println("Привет!");
+        hello();
         while(work) {
             print();
             execute();            
@@ -51,6 +51,10 @@ public class Console implements View{
 
     public void showMembers() {
         presenter.showMembers();
+    }
+
+    private void hello() {
+        System.out.println("Доброго времени суток!");
     }
     
     public boolean exit() {
@@ -87,4 +91,7 @@ public class Console implements View{
         System.out.println(INPUT_ERROR);
     }
 
+    public void writeMember() {
+        presenter.writeMember();
+    }
 }
