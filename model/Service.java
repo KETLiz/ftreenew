@@ -2,7 +2,8 @@ package model;
 
 public class Service {
     FamilyTree familyTree;
-    //Write write;
+    Savable write;
+    Read read;
 
     public Service() {
         familyTree = new FamilyTree();
@@ -33,13 +34,13 @@ public class Service {
     }
 
     public void writeMember() {
-        Write write = new Write();
+        write = new Write();
         write.save(familyTree);
     }
 
     public void readMember() throws ClassNotFoundException {
-        Read read = new Read();
-        FamilyTree f = read.load();
-        f.showInfo();
+        read = new Read();
+        familyTree = read.load();
+        familyTree.toString();
     }
 }
